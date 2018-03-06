@@ -136,8 +136,10 @@ def cmxlocationapi():
 
     try:
         response = requests.request("GET", endpoint, auth=(username, password))
+        print("got data")
         response = response.json()
         locationdata = response
+        print(locationdata)
     except Exception as e:
         print(e)
 
